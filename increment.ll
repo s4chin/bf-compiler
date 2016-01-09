@@ -13,7 +13,7 @@ define i32 @main() {
     ; increment the cell contents
     %cell_index = load i32* %cell_index_ptr
     %cell_ptr = getelementptr i8* %cells, i32 %cell_index
-    %current_value = load i8* cell_ptr
+    %current_value = load i8* %cell_ptr
     %new_value = add i8 %current_value, 1
     store i8 %new_value, i8* %cell_ptr
 
